@@ -1,0 +1,17 @@
+server:
+  port: 8089
+spring:
+  rocketmq:
+    nameServer: 192.168.248.69:9876
+    producer:
+      group: my-group
+      retry-times-when-send-async-failed: 0
+      send-msg-timeout: 300000
+      compress-msg-body-over-howmuch: 4096
+      max-message-size: 4194304
+      retry-another-broker-when-not-store-ok: false
+      retry-times-when-send-failed: 2
+
+whale:
+  producer:
+    topic: whale-topic-1
